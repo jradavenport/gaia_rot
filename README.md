@@ -1,1 +1,3 @@
-some plots about rotating stars in Gaia DR1
+Messing about with the *Kepler* rotating stars in Gaia DR1
+
+![]('fig.png')
