@@ -1,0 +1,207 @@
+\documentclass[manuscript, letterpaper]{aastex6}
+\bibliographystyle{aasjournal}
+
+\usepackage{graphicx}
+\usepackage[suffix=]{epstopdf}
+\usepackage{natbib}
+\usepackage{amsmath}
+\usepackage{url}
+\usepackage{xspace}
+
+% from here: https://github.com/dfm/peerless/blob/master/document/ms.tex#L19-L69
+% ----------------------------------- %
+% start of AASTeX mods by DWH and DFM %
+% ----------------------------------- %
+
+\setlength{\voffset}{0in}
+\setlength{\hoffset}{0in}
+\setlength{\textwidth}{6in}
+\setlength{\textheight}{9in}
+\setlength{\headheight}{0ex}
+\setlength{\headsep}{\baselinestretch\baselineskip} % this is 2 lines in ``manuscript''
+\setlength{\footnotesep}{0in}
+\setlength{\topmargin}{-\headsep}
+\setlength{\oddsidemargin}{0.25in}
+\setlength{\evensidemargin}{0.25in}
+
+\linespread{0.54} % close to 10/13 spacing in ``manuscript''
+\setlength{\parindent}{0.54\baselineskip}
+\hypersetup{colorlinks = false}
+\makeatletter % you know you are living your life wrong when you need to do this
+\long\def\frontmatter@title@above{
+\vspace*{-\headsep}\vspace*{\headheight}
+\noindent\footnotesize
+{\noindent\footnotesize\textsc{\@journalinfo}}\par
+{\noindent\scriptsize Preprint typeset using \LaTeX\ style AASTeX6\\
+With modifications by David W. Hogg and Daniel Foreman-Mackey
+}\par\vspace*{-\baselineskip}\vspace*{0.625in}
+}%
+\makeatother
+
+% Section spacing:
+\makeatletter
+\let\origsection\section
+\renewcommand\section{\@ifstar{\starsection}{\nostarsection}}
+\newcommand\nostarsection[1]{\sectionprelude\origsection{#1}}
+\newcommand\starsection[1]{\sectionprelude\origsection*{#1}}
+\newcommand\sectionprelude{\vspace{1em}}
+\let\origsubsection\subsection
+\renewcommand\subsection{\@ifstar{\starsubsection}{\nostarsubsection}}
+\newcommand\nostarsubsection[1]{\subsectionprelude\origsubsection{#1}}
+\newcommand\starsubsection[1]{\subsectionprelude\origsubsection*{#1}}
+\newcommand\subsectionprelude{\vspace{1em}}
+\makeatother
+
+\widowpenalty=10000
+\clubpenalty=10000
+
+\sloppy\sloppypar
+
+% ------------------ %
+% end of AASTeX mods %
+% ------------------ %
+
+
+
+%    Make Scientific Notation
+\providecommand{\e}[1]{\ensuremath{\times 10^{#1}}}
+
+% make the word Kepler italicized
+\newcommand{\Kepler}{\textsl{Kepler}\xspace}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%
+\title{Demonstrating the Stellar Rotation \Kepler--Gaia }
+
+\shorttitle{Rotating Stars}
+\shortauthors{Davenport}
+
+\author{
+	James R. A. Davenport\altaffilmark{1,2}
+	}
+
+%\altaffiltext{1}{Corresponding author: James.Davenport@wwu.edu}
+\altaffiltext{1}{Department of Physics \& Astronomy, Western Washington University, 516 High St., Bellingham, WA 98225, USA}
+\altaffiltext{2}{NSF Astronomy and Astrophysics Postdoctoral Fellow}
+ 
+
+ 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{abstract}
+Rotating stars. 
+overlap between samples
+two 
+\end{abstract}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Introduction}
+
+two period distribution found for M dwarfs in \citet{mcquillan2013}, confirmed in up to K dwarfs \citet{mcquillan2014} for full
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%
+\section{data}
+
+
+\Kepler mission \citep{borucki2010}
+
+the Gaia mission \citep{gaia}, Data Release 1 \citep{gaia_dr1}
+
+using CDS X-Match service
+tgas = J/ApJS/211/24/table1 \& I/337/tgas
+gaia = J/ApJS/211/24/table1 \& I/337/gaia
+
+
+
+
+
+%%%%%%%%%%%%
+\section{Determining Flare Energies}
+
+
+\begin{figure}[]
+\centering
+\includegraphics[width=6in]{fig1.png}
+\caption{
+}
+\label{fig:all}
+\end{figure}
+
+
+
+
+
+%%%%%%%%%%%%
+\section{Determining Flare Energies}
+
+
+\begin{figure}[]
+\centering
+\includegraphics[width=5.3in]{fig2.png}
+\caption{
+isochrones from \citet{bressan2012}
+}
+\label{fig:all}
+\end{figure}
+
+
+
+
+
+%%%%%%%%%%%%
+\section{Determining Flare Energies}
+
+
+\begin{figure}[]
+\centering
+\includegraphics[width=4in]{fig3.png}
+\caption{
+}
+\label{fig:all}
+\end{figure}
+
+
+
+
+%%%%%%%%%%%%
+\section{Determining Flare Energies}
+
+
+\begin{figure}[]
+\centering
+\includegraphics[width=5.3in]{fig4.png}
+\caption{
+}
+\label{fig:all}
+\end{figure}
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%
+\section{Discussion}
+gaia useful for dtrrmining the age distribution of the nearby field
+have shown utility for using Gaia data, combined with detailed light curve statitiscs from kepler, to reveal hidden structure in properties of field stars
+
+the bimodality may be another manifestation of the ``Vaughan Preston gap'' \citep{vaughan1980}, e.g. discussed for rotating stars by\citet{kado-fong2016}.
+either due to fast evolution thorugh intermediate stellar activity, or could be an age gap. 
+
+another way the full Gaia release could further contribute to this mystery is to model the star formation history of the stars in the \Kepler field, as well as the whole Milky Way \citep[e.g.][]{bertelli1999}. this will help A) improve gyrochronology relations by selecting only main sequence stars, and B) independently constrain age distribution for rotating stars to see if this gap is confirmed.
+
+
+%%%%%%%%%%%%%%%%%
+\acknowledgments
+JRAD is supported by an NSF Astronomy and Astrophysics Postdoctoral Fellowship under award AST-1501418.
+
+This research made use of the cross-match service provided by CDS, Strasbourg.
+
+\bibliography{/Users/james/Dropbox/references}
+
+\end{document}
