@@ -72,7 +72,7 @@ With modifications by David W. Hogg and Daniel Foreman-Mackey
 \begin{document}
 
 %%%%%%%%%%%%%%%%%%%%%%
-\title{Demonstrating the Stellar Rotation \Kepler--Gaia }
+\title{Rotating Stars from \Kepler Observed with Gaia}
 
 \shorttitle{Rotating Stars}
 \shortauthors{Davenport}
@@ -92,7 +92,7 @@ With modifications by David W. Hogg and Daniel Foreman-Mackey
 \begin{abstract}
 Rotating stars. 
 overlap between samples
-two 
+
 \end{abstract}
 
 
@@ -100,29 +100,30 @@ two
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Introduction}
 
+
+of course, Kepler useful for calibrations for Gaia, e.g. log(g) \citep{creevey2013}
+
 two period distribution found for M dwarfs in \citet{mcquillan2013}, confirmed in up to K dwarfs \citet{mcquillan2014} for full
 
 
-
-%%%%%%%%%%%%%%%%%%%%%%
-\section{data}
 
 
 \Kepler mission \citep{borucki2010}
 
 the Gaia mission \citep{gaia}, Data Release 1 \citep{gaia_dr1}
 
-using CDS X-Match service
-tgas = J/ApJS/211/24/table1 \& I/337/tgas
-gaia = J/ApJS/211/24/table1 \& I/337/gaia
 
 
 
 
 
-%%%%%%%%%%%%
-\section{Determining Flare Energies}
 
+%%%%%%%%%%%%%%%%%%%%%%
+\section{The \Kepler--Gaia Data}
+
+using CDS X-Match service, we match the catalogs from 
+%tgas = J/ApJS/211/24/table1 \& I/337/tgas
+%gaia = J/ApJS/211/24/table1 \& I/337/gaia
 
 \begin{figure}[]
 \centering
@@ -136,9 +137,12 @@ gaia = J/ApJS/211/24/table1 \& I/337/gaia
 
 
 
-%%%%%%%%%%%%
-\section{Determining Flare Energies}
 
+%%%%%%%%%%%%
+\section{Selecting Main Sequence Stars}
+
+
+first we create the HR diagram, using the absolute Gaia magnitudes from the TGAS parallaxes, and the temperatures reported from McQ14
 
 \begin{figure}[]
 \centering
@@ -146,15 +150,13 @@ gaia = J/ApJS/211/24/table1 \& I/337/gaia
 \caption{
 isochrones from \citet{bressan2012}
 }
-\label{fig:all}
+\label{fig:HR}
 \end{figure}
 
 
 
 
 
-%%%%%%%%%%%%
-\section{Determining Flare Energies}
 
 
 \begin{figure}[]
@@ -162,22 +164,27 @@ isochrones from \citet{bressan2012}
 \includegraphics[width=4in]{fig3.png}
 \caption{
 }
-\label{fig:all}
+\label{fig:hist}
 \end{figure}
 
 
 
 
 %%%%%%%%%%%%
-\section{Determining Flare Energies}
+\section{Extending the Spin-Down Gap}
 
+this feature first observed in rotation period by \citet{mcquillan2013} for M dwarfs
+
+here we show it appears to extended to nearby higher mass stars in the \Kepler field.
+
+the reason this feature did not appear in earlier \Kepler studies is the inability to select main sequence stars from turn-off or subgiants using the KIC
 
 \begin{figure}[]
 \centering
 \includegraphics[width=5.3in]{fig4.png}
 \caption{
 }
-\label{fig:all}
+\label{fig:gyro}
 \end{figure}
 
 
