@@ -144,14 +144,18 @@ Rotation period distribution for 41,739 \Kepler stars from \citet{mcquillan2014}
 %%%%%%%%%%%%
 \section{Selecting Main Sequence Stars}
 
-
+% (gaia[u'parallax_error'] < 0.4) &
+  %            (gaia[u'phot_g_mean_flux_error']/gaia[u'phot_g_mean_flux'] < 0.01))
+              
+              
 first we create the HR diagram, using the absolute Gaia magnitudes from the TGAS parallaxes, and the temperatures reported from McQ14
 
+
+%%%%%
 \begin{figure}[]
 \centering
 \includegraphics[width=5.3in]{fig2.png}
-\caption{
-isochrones from \citet{bressan2012}
+\caption{Hertzsprung--Russell (HR) diagram using temperatures from \citet{mcquillan2014} and Gaia DR1 $G$-band absolute magnitudes for the 894 stars that pass photometric and parallax quality cuts described in the text. Points are colored by their measured \Kepler rotation periods. Two isochrones from \citet{bressan2012} are shown, with ages of 300 Myr and 4 Gyr (solid and dashed lines).
 }
 \label{fig:HR}
 \end{figure}
@@ -161,12 +165,11 @@ isochrones from \citet{bressan2012}
 
 
 
-
+%%%%%
 \begin{figure}[]
 \centering
 \includegraphics[width=4in]{fig3.png}
-\caption{
-}
+\caption{Distribution of differences between the Gaia DR1 $G$ absolute magnitudes and values for main sequence stars from the 300 Myr isochrone shown in Figure \ref{fig:HR}. The range of sources selected near the single star main sequence (red lines) may have additional contamination due to dust extinction and binary companions.}
 \label{fig:hist}
 \end{figure}
 
@@ -182,6 +185,8 @@ here we show it appears to extended to nearby higher mass stars in the \Kepler f
 
 the reason this feature did not appear in earlier \Kepler studies is the inability to select main sequence stars from turn-off or subgiants using the KIC
 
+
+%%%%%
 \begin{figure}[]
 \centering
 \includegraphics[width=5.3in]{fig4.png}
