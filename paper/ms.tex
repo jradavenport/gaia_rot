@@ -189,9 +189,11 @@ the reason this feature did not appear in earlier \Kepler studies is the inabili
 %%%%%
 \begin{figure}[]
 \centering
-\includegraphics[width=5.3in]{fig4.png}
-\caption{ Rotation period versus temperature for TGAS-matched stars near the isochrone main sequence (blue circles). Distributions of rotation periods for these main sequence selected stars are shown as vertical histograms for 7 bins of temperature (black lines), with each temperature bin having equal numbers of stars. As in Figure \ref{fig:all}, the full \Kepler--Gaia matched sample is shown for reference (small black dots). The bimodality in rotation periods previously seen by \citet{mcquillan2014} extends the full range of temperatures in the \Kepler--Gaia main sequence sample shown here.
-A \citet{meibom2011} 600 Myr gyrochonology-isochrone roughly traces the bimodality midpoint up to 6000 K (red solid line). A log-linear extrapolation to 6500 K (red dashed line) continues to track the bimodality to hotter temperatures, and roughly traces a line of constant Rossby number.
+\includegraphics[width=5.3in]{fig4alt.png}
+\caption{ Rotation period versus temperature for TGAS-matched stars near the isochrone main sequence (blue circles). 
+%Distributions of rotation periods for these main sequence selected stars are shown as vertical histograms for 7 bins of temperature (black lines), with each temperature bin having equal numbers of stars. 
+As in Figure \ref{fig:all}, the full \Kepler--Gaia matched sample is shown for reference (small black dots). The bimodality in rotation periods previously seen by \citet{mcquillan2014} extends the full range of temperatures in the \Kepler--Gaia main sequence sample shown here.
+A \citet{meibom2011} 600 Myr gyrochonology-isochrone roughly traces the bimodality midpoint up to 6000 K (red solid line), but deviates sharply up to $\sim$6200 K (red dotted line). A log-linear extrapolation to of the isochrone from 6000K to 6500 K (red dashed line) continues to track the bimodality to hotter temperatures, and roughly traces a line of constant Rossby number. 
 }
 \label{fig:gyro}
 \end{figure}
@@ -199,21 +201,48 @@ A \citet{meibom2011} 600 Myr gyrochonology-isochrone roughly traces the bimodali
 
 
 
+
+\begin{figure}[]
+\centering
+\includegraphics[width=4in]{fig5.png}
+\caption{Residual of log rotation periods about the \citet{meibom2011} 600 Myr isochrone, using the log-linear extrapolation between 6000--6500 K shown in Figure \ref{fig:gyro}.
+}
+\label{fig:diff}
+\end{figure}
+
+
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%
 \section{Discussion}
-gaia useful for determining the age distribution of the nearby field
-have shown utility for using Gaia data, combined with detailed light curve statitiscs from kepler, to reveal hidden structure in properties of field stars. This combination will be super useful for determining approximate log g values (separating main sequence from sub-giants), and thus more accurate gyrochronology ages \citep{van-saders2013}
 
-another way the full Gaia release could further contribute to this mystery is to model the star formation history of the stars in the \Kepler field, as well as the whole Milky Way \citep[e.g.][]{bertelli1999}. This was previously tried using the color--absolute magnitude diagram from Hipparcos by \citet{hernandez2000}, who reconstructed a non-continuous star formation history for the local solar neighborhood.
-
-the bimodality may be another manifestation of the ``Vaughan Preston gap'' \citep{vaughan1980}, e.g. discussed for rotating stars by\citet{kado-fong2016}.
-either due to fast evolution through intermediate stellar activity, or could be an age gap. if age, these clumps line up roughly with a 300 Myr and 2 Gyr \citet{meibom2011} gyro-isochrone from cooler than about 6000 K
 
 median distance of K/M stars ($T_{eff} > 4000$ K) is $\sim$216 pc, using isochrone
 median distance for the TGAS-matched sample (blue points) is very close, 285 pc, so also sampling just the most local volume.
 this points to the effect being localized around us, which explains why it has not been seen in other gyro studies to date (e.g. clusters)
 Unfortunately not enough rotation period data across the fully convective boundary ($\sim$3000 K) to tell if this bimodal feature continues.
 
+
+
+the bimodality may be another manifestation of the ``Vaughan Preston gap'' \citep{vaughan1980}, e.g. discussed for rotating stars by\citet{kado-fong2016}.
+either due to fast evolution through intermediate stellar activity, or could be an age gap. if age, these clumps line up roughly with a 300 Myr and 2 Gyr \citet{meibom2011} gyro-isochrone from cooler than about 6000 K. this similar to the non-continusous star formation history for the local solar neighborhood using Hipparcos astrometry \citep{hernandez2000}. this age explanation was bolstered in \citet{mcquillan2013}, who noted the two populations of rotating M dwarfs had different distributions of proper motions, indicating they belonged to distinct groups of stars. The distribution of total proper motion for stars above and below the modified 600 Myr gyrochrone is shown in Figure \ref{fig:pm}. Stars above the gyrochrone (slower rotators, nominally older) have a median total proper motion of 15.4 mas/yr, while those below (faster rotators, younger)  have a median of 11.3 mas/yr. This difference in kinematics versus rotation period is in the same direction observed by \citet{mcquillan2013}. As the typical error in the total proper motion is $\sim$1.4 mas/yr for this sample, this is a marginal (2.8$\sigma$) difference. Note also that likely contamination of subgiants in the hotter stars may also obscure kinematic differences.
+
+%('median above: ', 15.373856668858519)
+%('median below: ', 11.301950163653459)
+%('median PM error:', 1.4275539188520987)
+%('diff / error = ', 2.8523661708548951)
+\begin{figure}[]
+\centering
+\includegraphics[width=4in]{fig6.png}
+\caption{Total proper motion distributions for stars above (rotating slower, older stars) the gyrochrone model shown in Figure \ref{fig:gyro} (black) and below (rotating faster, younger stars) the model (green). Median values of the two distributions are shown (thick lines), which yield a marginal 2.8$\sigma$ difference.
+}
+\label{fig:pm}
+\end{figure}
+
+
+finally, %gaia + \Kepler useful for determining the age distribution of the nearby field
+have shown utility for using Gaia data, combined with detailed light curve statitiscs from \Kepler, to reveal hidden structure in properties of field stars. This combination will be super useful for determining approximate log g values (separating main sequence from sub-giants), and thus more accurate gyrochronology ages \citep{van-saders2013}. also for modeling the star formation history of the entire milky way \citep[e.g.][]{bertelli1999}.
 
 
 
