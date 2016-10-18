@@ -1,4 +1,6 @@
 \documentclass[manuscript, letterpaper]{aastex6}
+%\documentclass[twocolumn]{aastex6}
+
 \bibliographystyle{aasjournal}
 
 \usepackage{graphicx}
@@ -12,7 +14,6 @@
 % ----------------------------------- %
 % start of AASTeX mods by DWH and DFM %
 % ----------------------------------- %
-
 \setlength{\voffset}{0in}
 \setlength{\hoffset}{0in}
 \setlength{\textwidth}{6in}
@@ -23,7 +24,6 @@
 \setlength{\topmargin}{-\headsep}
 \setlength{\oddsidemargin}{0.25in}
 \setlength{\evensidemargin}{0.25in}
-
 \linespread{0.54} % close to 10/13 spacing in ``manuscript''
 \setlength{\parindent}{0.54\baselineskip}
 %\hypersetup{colorlinks = false}
@@ -37,7 +37,6 @@ With modifications by David W. Hogg and Daniel Foreman-Mackey
 }\par\vspace*{-\baselineskip}\vspace*{0.625in}
 }%
 \makeatother
-
 % Section spacing:
 \makeatletter
 \let\origsection\section
@@ -51,12 +50,9 @@ With modifications by David W. Hogg and Daniel Foreman-Mackey
 \newcommand\starsubsection[1]{\subsectionprelude\origsubsection*{#1}}
 \newcommand\subsectionprelude{\vspace{1em}}
 \makeatother
-
 \widowpenalty=10000
 \clubpenalty=10000
-
 \sloppy\sloppypar
-
 % ------------------ %
 % end of AASTeX mods %
 % ------------------ %
@@ -90,8 +86,9 @@ With modifications by David W. Hogg and Daniel Foreman-Mackey
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{abstract}
-Astrometric data from the recent Gaia Data Release 1 has been matched against the sample of stars from \Kepler with known rotation periods. A total of 1,303 bright stars were recovered from the subset of Gaia sources with good astrometric solutions, most with temperatures hotter than 5000 K. 
-
+Astrometric data from the recent Gaia Data Release 1 has been matched against the sample of stars from \Kepler with known rotation periods. A total of 1,299 bright rotating stars were recovered from the subset of Gaia sources with good astrometric solutions, most with temperatures hotter than 5000 K. From these sources, 894 were selected as lying near the main sequence using their absolute $G$-band magnitudes. These main sequence stars show a bimodality in their rotation period distribution, centered roughly around a 600 Myr rotation-isochrone. This feature matches the bimodal period distribution from cooler stars with \Kepler, but was previously undetected for solar-type stars due to sample contamination by subgiants.
+A tenuous connection between the rotation period and total proper motion is found, suggesting the period bimodality is due to the age distribution of stars within $\sim$300pc of the Sun, rather than a phase of rapid angular momentum loss.
+This emphasizes the unique power for stellar populations studies of combining temporal monitoring from \Kepler with astrometric data from Gaia
 \end{abstract}
 
 
@@ -99,17 +96,16 @@ Astrometric data from the recent Gaia Data Release 1 has been matched against th
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Introduction}
 
-\Kepler mission \citep{borucki2010} has enabled statistical study of rotation periods for field stars for the first time. This fundamental stellar property has been measured for over 30k stars by tracing the periodic or quasi-periodic modulations of their light curves as cool starspots rotate in and out of view \citep{reinhold2013,mcquillan2014}. The seminal work by \citet{skumanich1972} connected stellar rotation and age via angular momentum loss, leading to an age estimating technique known as gyrochronology.
-With rotation now being routinely measured, it is hoped a new ability of determining robust ages for field stars will be possible by calibrating gyro-isochrones, and  \citep[e.g.][]{angus2015,van-saders2016}. 
+The\Kepler mission \citep{borucki2010} has enabled the first studies of rotation periods for large ensembles of field stars. The fundamental stellar property of rotation has been measured for over 30k stars using the high cadence \Kepler light curves, tracing the periodic or quasi-periodic modulations in brightness as cool starspots rotate in and out of view \citep{reinhold2013,mcquillan2014}. The seminal work by \citet{skumanich1972} connected stellar rotation and age via angular momentum loss, leading to an age estimating technique known as gyrochronology. At present, ages determined by gyrochronology are accurate to $\sim$10\% in the {\it best} cases (young solar-type stars). With rotation now being routinely measured, it is hoped a new ability of determining robust ages for field stars will be possible by calibrating gyro-isochrones, and  \citep[e.g.][]{angus2015,van-saders2016}. 
 
 
-Curiously, two period distributions found for M dwarfs in \citet{mcquillan2013}, confirmed in up to K dwarfs \citet{mcquillan2014}. Why this feature is not found at hotter temperatures, or has not been seen in other comprehensive rotation period studies (such as in open clusters), is a mystery. Currently favored explanations are an age distribution (CITE) or a rapid evolution through this period, similar to the Vaughan-Preston gap (?).  Binary stars and period contamination by evolved stars may also be confounding our understanding of the period distribution seen for \Kepler targets.
+Curiously, in studying the rotation periods for M dwarfs in the \Kepler field, \citet{mcquillan2013} discovered a bimodal period distribution, which was subsequently confirmed to exist up to K dwarfs in the \Kepler field by \citet{mcquillan2014}. However, this had never been observed in any other study of stellar rotation periods, including stellar clusters at a variety of ages, nor was it detected in the \Kepler stars at hotter temperatures ($T_{eff} > 5000$). While binary stars and multiple-period systems may be contaminating the rotation period sample for \Kepler field stars, \citet{mcquillan2014} found they could not adequately explain the bimodal period distribution. Currently favored explanations for this feature are 1) a non-continuous age distribution for nearby stars, as was suggested with very nearby Hipparcos stars by \citet{hernandez2000}, or 2) a previously unknown phase of rapid angular momentum loss for low-mass stars, similar to the ``Vaughan-Preston'' gap seen in chromospheric activity indicators \citep{vaughan1980}. As independent age indicators for these field stars are often non-existent, and both scenarios deal with physical mechanisms that are not currently understood with precision, a definitive explanation has not been found.
 
 
-astrometric data from the Gaia mission \citep{gaia} can help shed light on this mystery. By measuring distances via stellar parallax, the \Kepler--Gaia sample can separate single main sequence dwarfs from binary stars or evolved stars such as sub-giants, and can help calibrate fundamental properties of \Kepler stars, such as log(g) \citep{creevey2013}. This will help isolate the cause of the period bimodality,
- 
+Astrometric data from the Gaia mission \citep{gaia} can help shed light on this stellar population mystery. By measuring distances via stellar parallax for these rotating stars, the \Kepler--Gaia sample can separate single main sequence dwarfs from binary stars or evolved stars such as subgiants, and will help calibrate fundamental properties of \Kepler stars, such as log(g) \citep{creevey2013}. Galactic kinematics from Gaia will also provide an additional age-proxy, and allow for searches of substructure in field star ages such as from moving groups. The Gaia data will also enable a measurement of the star formation history of the disk from both white dwarf cooling sequences \citep{carrasco2014,gaensicke2015} and color-magnitude diagram models \citep{bertelli1999}.
 
-In this paper I demonstrate the utility of combining \Kepler rotation period sample with the preliminary Data Release 1 from Gaia \citep{gaia_dr1}. This combined sample allows improved selection of main sequence stars, and reveals previously undetected structure in the rotation period distribution for solar-type stars.
+
+In this paper I demonstrate the utility of combining temporal properties derived from \Kepler light curves with the preliminary astrometric solutions from  Gaia Data Release 1 \citep[hereafter DR1][]{gaia_dr1}. This combined sample allows improved selection of main sequence stars, and reveals previously undetected structure in the rotation period distribution for solar-type stars.
 
 
 
@@ -117,21 +113,23 @@ In this paper I demonstrate the utility of combining \Kepler rotation period sam
 
 %%%%%%%%%%%%%%%%%%%%%%
 \section{The \Kepler--Gaia Data}
-Rotation periods in this study come from \citet{mcquillan2014}, who performed an Auto-Correlation Function analysis of \Kepler stars cooler than 6500 K that had at least $\sim$2 years of observation. The periods recovered from this approach generally agree very well with those found via Lomb-Scargle Periodograms \citep[e.g.][]{aigrain2015}. Sources with multiple distinct periods, such as from binary systems with two spotted stars \citep[e.g.][]{lurie2015} are detected by \citet{mcquillan2014}, but are not included in the following analysis.
+Rotation periods in this study come from \citet{mcquillan2014}, who performed an Auto-Correlation Function analysis of \Kepler stars cooler than 6500 K that had at least $\sim$2 years of observation. The periods recovered from this approach generally agree very well with those found via Lomb-Scargle Periodograms \citep[e.g.][]{reinhold2013,aigrain2015}. Sources with multiple distinct periods, such as from binary systems with two spotted stars \citep[e.g.][]{lurie2015} are detected by \citet{mcquillan2014}, but are not included in the following analysis.
 
-The Gaia Data Release 1 (DR1) provides astrometric positions for over $10^9$ sources from the first year of observation with Gaia. The Tycho-Gaia Astrometric Solution (TGAS) measures improved proper motions and parallaxes for 2 million nearby, bright sources by extending the astrometric solutions from Tycho and Hipparcos.
+The Gaia Data Release 1 (DR1) provides astrometric positions for over $10^9$ sources from the first year of observation with Gaia. The Tycho-Gaia Astrometric Solution (TGAS) measures improved proper motions and parallaxes for 2 million nearby, bright sources by extending the astrometric solutions from Tycho and Hipparcos. While the TGAS data are not a complete astrometric survey, and have possible systematics in the reported parallaxes \citep{stassun2016}, they represent a significant improvement in the astrometry and kinematics available for stars in the \Kepler field thanks to the precision of Gaia.
 
 
-using CDS X-Match service, I matched the catalogs from these two surveys. The rotation period distribution is shown in Figure \ref{fig:all}. A total of 41,739 \Kepler rotation period sources were found in the Gaia DR1 catalog. A subset of 1,303 objects were recovered in the TGAS sample. Due to the brightness limits of the TGAS sample very few K and M dwarfs were recovered in the TGAS sample. Future releases of Gaia data will ostensibly provide astrometry for nearly all \Kepler stars.
+Using the CDS X-Match service, I cross-matched the available catalogs from these two surveys. A default cross-match radius of 5 arcsec was used. A total of 33,855 stars were found in cross match between these catalogs, 99.5\% of the sample from \citet{mcquillan2014}. 
+A subset of 1,299 objects were recovered in the TGAS sample. Due to the brightness limits of the TGAS sample very few K and M dwarfs were recovered in the TGAS sample. Future releases of Gaia data will ostensibly provide full astrometric solutions for nearly all \Kepler stars. The rotation periods versus stellar effective temperatures for the \Kepler--Gaia matched stars are shown in Figure \ref{fig:all}. 
+
+
 
 %tgas = J/ApJS/211/24/table1 \& I/337/tgas
 %gaia = J/ApJS/211/24/table1 \& I/337/gaia
-
 \begin{figure}[]
 \centering
 \includegraphics[width=6in]{fig1.png}
 \caption{
-Rotation period distribution for 41,739 \Kepler stars from \citet{mcquillan2014} with detections in Gaia DR1 (blue dots). The period bimodality can be seen most clearly for stars with $T_{eff} < 4000$ K as a dearth of sources with periods of $\sim$20 days, but extends to at least $T_{eff}\sim5500$ K according to \citet{mcquillan2014}. The subsample of 1,303 nearby objects found in TGAS are highlighted (red circles), and are mostly hotter stars due to the faint limit of the TGAS sample. 
+Rotation period distribution for 33,855 \Kepler stars from \citet{mcquillan2014} with detections in Gaia DR1 (blue dots). The period bimodality can be seen most clearly for stars with $T_{eff} < 4000$ K as a dearth of sources with periods of $\sim$20 days, but extends to at least $T_{eff}\sim5500$ K according to \citet{mcquillan2014}. The subsample of 1,299 nearby objects found in TGAS are highlighted (red circles), and are mostly hotter stars due to the faint limit of the TGAS sample. 
 }
 \label{fig:all}
 \end{figure}
@@ -140,15 +138,14 @@ Rotation period distribution for 41,739 \Kepler stars from \citet{mcquillan2014}
 
 
 
-
-%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%
 \section{Selecting Main Sequence Stars}
 
 % (gaia[u'parallax_error'] < 0.4) &
   %            (gaia[u'phot_g_mean_flux_error']/gaia[u'phot_g_mean_flux'] < 0.01))
-              
-              
-first we create the HR diagram, using the absolute Gaia magnitudes from the TGAS parallaxes, and the temperatures reported from McQ14
+Though \citet{mcquillan2014} attempted to only measure periods for dwarf starss, the sample of \Kepler--Gaia matched stars contains both main sequence dwarfs and evolved stars (giants and subgiants). Previous studies have shown sometimes significant contamination by giants can affect the implied variability properties for dwarf stars \citep{ciardi2011,mann2012}. Therefore to properly understand the nature of the period distribution, a sample of robust main sequence stars must be selected.
+
+Faint stars were removed by requiring sources have $G$-band flux errors $<1$\%. To ensure accurate distances, and therefore luminosities, parallaxes were required to have errors $<0.4$ mas / year. These cuts left a total of 894 stars from the \Kepler--TGAS matched sample (68\%). The Hertzsprung--Russell (HR) diagram for these stars is shown in Figure \ref{fig:HR}.
 
 
 %%%%%
@@ -205,7 +202,7 @@ A \citet{meibom2011} 600 Myr gyrochonology-isochrone roughly traces the bimodali
 \begin{figure}[]
 \centering
 \includegraphics[width=4in]{fig5.png}
-\caption{Residual of log rotation periods about the \citet{meibom2011} 600 Myr isochrone, using the log-linear extrapolation between 6000--6500 K shown in Figure \ref{fig:gyro}.
+\caption{Residual of log rotation periods about the \citet{meibom2011} 600 Myr isochrone, using the log-linear extrapolation between 6000--6500 K shown in Figure \ref{fig:gyro}. The bimodal rotation period distribution is clear, with peaks at $\Delta \log P_{rot}$ -0.19 and 0.21 days.
 }
 \label{fig:diff}
 \end{figure}
@@ -254,6 +251,6 @@ JRAD is supported by an NSF Astronomy and Astrophysics Postdoctoral Fellowship u
 
 This research made use of the cross-match service provided by CDS, Strasbourg.
 
-\bibliography{/Users/james/Dropbox/references}
+\bibliography{/Users/davenpj3/Dropbox/references}
 
 \end{document}
