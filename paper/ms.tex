@@ -96,7 +96,7 @@ This emphasizes the unique power for stellar populations studies of combining te
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Introduction}
 
-The\Kepler mission \citep{borucki2010} has enabled the first studies of rotation periods for large ensembles of field stars. The fundamental stellar property of rotation has been measured for over 30k stars using the high cadence \Kepler light curves, tracing the periodic or quasi-periodic modulations in brightness as cool starspots rotate in and out of view \citep{reinhold2013,mcquillan2014}. The seminal work by \citet{skumanich1972} connected stellar rotation and age via angular momentum loss, leading to an age estimating technique known as gyrochronology. At present, ages determined by gyrochronology are accurate to $\sim$10\% in the {\it best} cases (young solar-type stars). With rotation now being routinely measured, it is hoped a new ability of determining robust ages for field stars will be possible by calibrating gyro-isochrones, and  \citep[e.g.][]{angus2015,van-saders2016}. 
+The \Kepler mission \citep{borucki2010} has enabled the first studies of rotation periods for large ensembles of field stars. The fundamental stellar property of rotation has been measured for over 30k stars using the high cadence \Kepler light curves, tracing the periodic or quasi-periodic modulations in brightness as cool starspots rotate in and out of view \citep{reinhold2013,mcquillan2014}. The seminal work by \citet{skumanich1972} connected stellar rotation and age via angular momentum loss, leading to an age estimating technique known as gyrochronology. At present, ages determined by gyrochronology are accurate to $\sim$10\% in the {\it best} cases (young solar-type stars). With rotation now being routinely measured, it is hoped a new ability of determining robust ages for field stars will be possible by calibrating gyro-isochrones to stellar clusters and asteroseismic samples, and improved models of angular momentum loss \citep[e.g.][]{angus2015,van-saders2016}. 
 
 
 Curiously, in studying the rotation periods for M dwarfs in the \Kepler field, \citet{mcquillan2013} discovered a bimodal period distribution, which was subsequently confirmed to exist up to K dwarfs in the \Kepler field by \citet{mcquillan2014}. However, this had never been observed in any other study of stellar rotation periods, including stellar clusters at a variety of ages, nor was it detected in the \Kepler stars at hotter temperatures ($T_{eff} > 5000$). While binary stars and multiple-period systems may be contaminating the rotation period sample for \Kepler field stars, \citet{mcquillan2014} found they could not adequately explain the bimodal period distribution. Currently favored explanations for this feature are 1) a non-continuous age distribution for nearby stars, as was suggested with very nearby Hipparcos stars by \citet{hernandez2000}, or 2) a previously unknown phase of rapid angular momentum loss for low-mass stars, similar to the ``Vaughan-Preston'' gap seen in chromospheric activity indicators \citep{vaughan1980}. As independent age indicators for these field stars are often non-existent, and both scenarios deal with physical mechanisms that are not currently understood with precision, a definitive explanation has not been found.
@@ -129,7 +129,7 @@ A subset of 1,299 objects were recovered in the TGAS sample. Due to the brightne
 \centering
 \includegraphics[width=6in]{fig1.png}
 \caption{
-Rotation period distribution for 33,855 \Kepler stars from \citet{mcquillan2014} with detections in Gaia DR1 (blue dots). The period bimodality can be seen most clearly for stars with $T_{eff} < 4000$ K as a dearth of sources with periods of $\sim$20 days, but extends to at least $T_{eff}\sim5500$ K according to \citet{mcquillan2014}. The subsample of 1,299 nearby objects found in TGAS are highlighted (red circles), and are mostly hotter stars due to the faint limit of the TGAS sample. 
+Rotation period distribution for 33,855 \Kepler stars from \citet{mcquillan2014} with detections in Gaia DR1 (blue dots). The period bimodality can be seen most clearly for stars with $T_{eff} < 4000$ K as a dearth of sources with periods of $\sim$25 days, but extends to at least $T_{eff}\sim5500$ K according to \citet{mcquillan2014}. The subsample of 1,299 nearby objects found in TGAS are highlighted (red circles), and are mostly hotter stars due to the faint limit of the TGAS sample. 
 }
 \label{fig:all}
 \end{figure}
@@ -152,15 +152,15 @@ Rotation period distribution for 33,855 \Kepler stars from \citet{mcquillan2014}
 
 % (gaia[u'parallax_error'] < 0.4) &
   %            (gaia[u'phot_g_mean_flux_error']/gaia[u'phot_g_mean_flux'] < 0.01))
-Though \citet{mcquillan2014} attempted to only measure periods for dwarf starss, the sample of \Kepler--Gaia matched stars contains both main sequence dwarfs and evolved stars (giants and subgiants). Previous studies have shown sometimes significant contamination by giants can affect the implied variability properties for dwarf stars \citep{ciardi2011,mann2012}. Therefore to properly understand the nature of the period distribution, a robust sample of main sequence stars must be selected.
+Though \citet{mcquillan2014} attempted to only measure periods for dwarf stars, the sample of \Kepler--Gaia matched stars contains both main sequence dwarfs and evolved stars (giants and subgiants). Previous studies have shown  significant contamination by giants or subgiants can affect the implied variability properties of dwarf stars \citep{ciardi2011,mann2012}. Therefore to properly understand the nature of the period distribution and its implications for age-dating field stars, a robust sample of main sequence stars must be selected.
 
 Faint stars were removed by requiring sources have $G$-band flux errors $<1$\%. To ensure accurate distances, and therefore luminosities, parallaxes were required to have errors $<0.4$ mas year$^{-1}$. These cuts left a total of 894 stars from the \Kepler--TGAS matched sample (68\%). The Hertzsprung--Russell (HR) diagram for these stars is shown in Figure \ref{fig:HR}, with each point colored by its \Kepler-measured rotation period. Example isochrones from the \citet{bressan2012} grid are shown for two ages. A systematic offset between the measured absolute $G$-band and the isochrone main sequence of $\sim$0.5 magnitudes is found (Figure \ref{fig:hist}). 
 
-The HR-period diagram in Figure \ref{fig:HR} shows stars with a range of evolutionary states, and could help test post-main sequence angular momentum evolution models \citep[e.g.][]{donascimento2012}. Outliers in this diagram (e.g. the rapidly rotating star at $T_{eff}=4500$ K, $M_G=4.5$ mag, $P_{rot}$=0.652 d, KIC 07957709) are either due to erroneous cross-matching between the \Kepler and Gaia catalogs, or represent interesting systems such as rare binary star configurations or stars that have undergone mergers or ingested giant planets \citep{massarotti2008,tayar2015}. Explaining such outliers is beyond the scope of this work, but are worth further study.
+The HR-period diagram in Figure \ref{fig:HR} shows stars with a range of evolutionary states, and could help test post-main sequence angular momentum evolution models \citep[e.g.][]{donascimento2012}. Outliers in this diagram (e.g. the rapidly rotating star at $T_{eff}=4500$ K, $M_G=4.5$ mag, $P_{rot}$=0.652 d, KIC 07957709) are either due to erroneous cross-matching between the \Kepler and Gaia catalogs, or represent interesting systems such as rare binary star configurations or stars that have undergone mergers or ingested giant planets \citep{massarotti2008,tayar2015}. Explaining such outliers is beyond the scope of this work, but these targets are worth further study as they may reveal new physics.
 
 
 
-The difference between the 300 Myr isochrone main sequence track and the observed $M_G$ is shown in Figure \ref{fig:hist}. Given the systematic offset of $\sim$0.5 mag, a fairly wide band of stars ($0\le \Delta M_G \le 1$) was selected as being ``close to the main sequence''. This final sample included 440 stars. This simplistic cut is not a robust dwarf--giant, nor single--binary star separator, but serves to select a sample of mostly main sequence stars for the illustrative purpose of this work. More precise selection will require an improved isochrone track, as well as updated parallaxes from the full Gaia DR2.
+The difference between the 300 Myr isochrone main sequence track and the observed $M_G$ is shown in Figure \ref{fig:hist}. Given the systematic offset of $\sim$0.5 mag, a fairly wide band of stars ($0\le \Delta M_G \le 1$) was selected as being ``close to the main sequence''. The final sample included 440 stars. This simplistic cut is not a robust dwarf--giant, nor single--binary star separator, but serves to select a sample of mostly main sequence stars for the illustrative purpose of this work. More precise selection will require an improved isochrone track, as well as updated parallaxes from the full Gaia DR2.
 
 
 
@@ -176,14 +176,15 @@ The difference between the 300 Myr isochrone main sequence track and the observe
 
 
 
-%%%%%%%%%%%%
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%
 \section{Extending the Spin-Down Gap}
+A bimodal period distribution was first discovered by \citet{mcquillan2013} for \Kepler M dwarfs, who found a dearth of objects with periods around $\sim$25 days. Follow-up work by \citet{mcquillan2014} found this bimodality extended to K dwarfs, up to $T_{eff}\sim5500$. Figure \ref{fig:gyro} shows the rotation period distribution for the final 440 star sample of likely main sequence stars. The bimodality appears to extend smoothly through to the hottest stars in this sample. 
 
-this feature first observed in rotation period by \citet{mcquillan2013} for M dwarfs
-
-here we show it appears to extended to nearby higher mass stars in the \Kepler field.
-
-the reason this feature did not appear in earlier \Kepler studies is the inability to select main sequence stars from turn-off or subgiants using the KIC
+While these periods for field stars were robustly measured by \citet{mcquillan2014} and others, the bimodality did not appear in previous \Kepler work due to the high contamination rate by subgiants for these bluer, hotter stars.  414 rotating stars had acceptable photometric and parallax uncertainties in TGAS, but were culled from this sample for having $M_G$ luminosities higher than the main sequence cut in \S3 above. Note that distributions of $\log g$ values from the Kepler Input Catalog \citep{brown2011a} for both the main sequence and subgiant stars were not statistically different.
 
 
 %%%%%
@@ -191,26 +192,47 @@ the reason this feature did not appear in earlier \Kepler studies is the inabili
 \centering
 \includegraphics[width=5.3in]{fig4alt.png}
 \caption{ Rotation period versus temperature for TGAS-matched stars near the isochrone main sequence (blue circles). 
-%Distributions of rotation periods for these main sequence selected stars are shown as vertical histograms for 7 bins of temperature (black lines), with each temperature bin having equal numbers of stars. 
-As in Figure \ref{fig:all}, the full \Kepler--Gaia matched sample is shown for reference (small black dots). The bimodality in rotation periods previously seen by \citet{mcquillan2014} extends the full range of temperatures in the \Kepler--Gaia main sequence sample shown here.
-A \citet{meibom2011} 600 Myr gyrochonology-isochrone roughly traces the bimodality midpoint up to 6000 K (red solid line), but deviates sharply up to $\sim$6200 K (red dotted line). A log-linear extrapolation to of the isochrone from 6000K to 6500 K (red dashed line) continues to track the bimodality to hotter temperatures, and roughly traces a line of constant Rossby number. 
+The full \Kepler--Gaia matched sample is shown for reference (small black dots). A bimodality in rotation periods initially discovered for M dwarfs by \citet{mcquillan2013}, extends the full range of temperatures in the \Kepler--Gaia main sequence sample shown here.
+A \citet{meibom2011} 600 Myr gyrochonology-isochrone (gyrochrone) traces the bimodality midpoint up to 6000 K (red solid line), but deviates from the isochrone sharply to $\sim$6200 K (red dotted line). A log-linear extrapolation of the isochrone at 6000K to 6500 K (red dashed line) continues to track the bimodality to hotter temperatures, and roughly follows a line of constant Rossby number. 
 }
 \label{fig:gyro}
 \end{figure}
 
 
 
+The minimum in the bimodal period distribution in Figure \ref{fig:gyro} can be traced using a gyrochonology isochrone (colloquially known as a ``gyrochrone'').  Many different studies have produced competing gyrochrone models, each with unique morphologies at the hot and cool star regimes \citep[e.g.][]{barnes2007,mamajek2008,meibom2011,angus2015}. A 600 Myr gyrochrone from \citet{meibom2011} was determined by eye to approximately trace the period minima from 3500 K to 6000 K. As shown in Figure \ref{fig:gyro}, this model (as with most gyrochronology models) turns down in period sharply for stars hotter than $\sim$6000 K. A log-linear extrapolation of the 600 Myr gyrochrone at 6000 K continues to trace the period bimodality up to 6500 K, and roughly traces a line of constant Rossby number.
 
 
+
+%%%%%
 \begin{figure}[]
 \centering
 \includegraphics[width=4in]{fig5.png}
-\caption{Residual of log rotation periods about the \citet{meibom2011} 600 Myr isochrone, using the log-linear extrapolation between 6000--6500 K shown in Figure \ref{fig:gyro}. The bimodal rotation period distribution is clear, with peaks at $\Delta \log P_{rot}$ of -0.19 and 0.21 days. A two-Gaussian model was fit to this distribution (blue line).
-}
+\caption{Residual of log rotation periods about the \citet{meibom2011} 600 Myr gyrochrone, using the log-linear extrapolation between 6000--6500 K shown in Figure \ref{fig:gyro}. The bimodal rotation period distribution is clear, with peaks at $\Delta \log P_{rot}$ of -0.19 and 0.21 days. A two-Gaussian model was fit to this distribution (blue line).
+Approximately 50\% more stars are present in the slower, nominally older peak (right).}
 \label{fig:diff}
 \end{figure}
 
 
+The difference (in log period) between the observed rotation and the 600 Myr gyrochrone for the 440 likely main sequence stars is shown in Figure \ref{fig:diff}. Despite combining stars of all temperatures, the bimodality is clearly seen in this log period space. A two Gaussian model was fit to this data, which found peaks in the two periods distributions of $-0.19 \pm 0.01$ and $0.21 \pm 0.01$ days.  262 stars had periods longer than the gyrochrone model (right peak) and 178 slower than the model (left peak). This is in contrast to the overall results from \citet{mcquillan2013} who found nearly equal numbers of M dwarfs in the fast and slow rotating groups, but is in general agreement with their sample with non-zero proper motions. 
+%IDL> print, 262./178.
+%      1.47191 ==> US
+%IDL> print, 345./266.
+%      1.29699 ==> THEM
+
+
+
+
+%%%%%
+\begin{figure}[]
+\centering
+\includegraphics[width=4in]{fig6.png}
+\caption{Total proper motion distributions for stars above (rotating slower, older stars) the gyrochrone model shown in Figure \ref{fig:gyro} (black) and below (rotating faster, younger stars) the model (green). Median values of the two distributions are shown (thick lines), which yield a marginal 2.8$\sigma$ difference.
+}
+\label{fig:pm}
+\end{figure}
+
+this age explanation was bolstered in \citet{mcquillan2013}, who noted the two populations of rotating M dwarfs had different distributions of proper motions, indicating they belonged to distinct groups of stars. The distribution of total proper motion for stars above and below the modified 600 Myr gyrochrone is shown in Figure \ref{fig:pm}. Stars above the gyrochrone (slower rotators, nominally older) have a median total proper motion of 15.4 mas/yr, while those below (faster rotators, younger)  have a median of 11.3 mas/yr. This difference in kinematics versus rotation period is in the same direction observed by \citet{mcquillan2013}. As the typical error in the total proper motion is $\sim$1.4 mas/yr for this sample, this is a marginal (2.8$\sigma$) difference. Note also that likely contamination of subgiants in the hotter stars may also obscure kinematic differences.
 
 
 
@@ -226,20 +248,7 @@ Unfortunately not enough rotation period data across the fully convective bounda
 
 
 the bimodality may be another manifestation of the ``Vaughan Preston gap'' \citep{vaughan1980}, e.g. discussed for rotating stars by\citet{kado-fong2016}.
-either due to fast evolution through intermediate stellar activity, or could be an age gap. if age, these clumps line up roughly with a 300 Myr and 2 Gyr \citet{meibom2011} gyro-isochrone from cooler than about 6000 K. this similar to the non-continusous star formation history for the local solar neighborhood using Hipparcos astrometry \citep{hernandez2000}. this age explanation was bolstered in \citet{mcquillan2013}, who noted the two populations of rotating M dwarfs had different distributions of proper motions, indicating they belonged to distinct groups of stars. The distribution of total proper motion for stars above and below the modified 600 Myr gyrochrone is shown in Figure \ref{fig:pm}. Stars above the gyrochrone (slower rotators, nominally older) have a median total proper motion of 15.4 mas/yr, while those below (faster rotators, younger)  have a median of 11.3 mas/yr. This difference in kinematics versus rotation period is in the same direction observed by \citet{mcquillan2013}. As the typical error in the total proper motion is $\sim$1.4 mas/yr for this sample, this is a marginal (2.8$\sigma$) difference. Note also that likely contamination of subgiants in the hotter stars may also obscure kinematic differences.
-
-%('median above: ', 15.373856668858519)
-%('median below: ', 11.301950163653459)
-%('median PM error:', 1.4275539188520987)
-%('diff / error = ', 2.8523661708548951)
-\begin{figure}[]
-\centering
-\includegraphics[width=4in]{fig6.png}
-\caption{Total proper motion distributions for stars above (rotating slower, older stars) the gyrochrone model shown in Figure \ref{fig:gyro} (black) and below (rotating faster, younger stars) the model (green). Median values of the two distributions are shown (thick lines), which yield a marginal 2.8$\sigma$ difference.
-}
-\label{fig:pm}
-\end{figure}
-
+either due to fast evolution through intermediate stellar activity, or could be an age gap. if age, these clumps line up roughly with a 300 Myr and 2 Gyr \citet{meibom2011} gyro-isochrone from cooler than about 6000 K. this similar to the non-continusous star formation history for the local solar neighborhood using Hipparcos astrometry \citep{hernandez2000}. 
 
 finally, %gaia + \Kepler useful for determining the age distribution of the nearby field
 have shown utility for using Gaia data, combined with detailed light curve statitiscs from \Kepler, to reveal hidden structure in properties of field stars. This combination will be super useful for determining approximate log g values (separating main sequence from sub-giants), and thus more accurate gyrochronology ages \citep{van-saders2013}. also for modeling the star formation history of the entire milky way \citep[e.g.][]{bertelli1999}.
