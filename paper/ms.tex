@@ -138,16 +138,6 @@ Rotation period distribution for 33,855 \Kepler stars from \citet{mcquillan2014}
 
 
 
-%%%%%%%%%%%%%%%%%%%%%%
-\section{Selecting Main Sequence Stars}
-
-% (gaia[u'parallax_error'] < 0.4) &
-  %            (gaia[u'phot_g_mean_flux_error']/gaia[u'phot_g_mean_flux'] < 0.01))
-Though \citet{mcquillan2014} attempted to only measure periods for dwarf starss, the sample of \Kepler--Gaia matched stars contains both main sequence dwarfs and evolved stars (giants and subgiants). Previous studies have shown sometimes significant contamination by giants can affect the implied variability properties for dwarf stars \citep{ciardi2011,mann2012}. Therefore to properly understand the nature of the period distribution, a sample of robust main sequence stars must be selected.
-
-Faint stars were removed by requiring sources have $G$-band flux errors $<1$\%. To ensure accurate distances, and therefore luminosities, parallaxes were required to have errors $<0.4$ mas / year. These cuts left a total of 894 stars from the \Kepler--TGAS matched sample (68\%). The Hertzsprung--Russell (HR) diagram for these stars is shown in Figure \ref{fig:HR}.
-
-
 %%%%%
 \begin{figure}[]
 \centering
@@ -157,7 +147,20 @@ Faint stars were removed by requiring sources have $G$-band flux errors $<1$\%. 
 \label{fig:HR}
 \end{figure}
 
+%%%%%%%%%%%%%%%%%%%%%%
+\section{Selecting Main Sequence Stars}
 
+% (gaia[u'parallax_error'] < 0.4) &
+  %            (gaia[u'phot_g_mean_flux_error']/gaia[u'phot_g_mean_flux'] < 0.01))
+Though \citet{mcquillan2014} attempted to only measure periods for dwarf starss, the sample of \Kepler--Gaia matched stars contains both main sequence dwarfs and evolved stars (giants and subgiants). Previous studies have shown sometimes significant contamination by giants can affect the implied variability properties for dwarf stars \citep{ciardi2011,mann2012}. Therefore to properly understand the nature of the period distribution, a robust sample of main sequence stars must be selected.
+
+Faint stars were removed by requiring sources have $G$-band flux errors $<1$\%. To ensure accurate distances, and therefore luminosities, parallaxes were required to have errors $<0.4$ mas year$^{-1}$. These cuts left a total of 894 stars from the \Kepler--TGAS matched sample (68\%). The Hertzsprung--Russell (HR) diagram for these stars is shown in Figure \ref{fig:HR}, with each point colored by its \Kepler-measured rotation period. Example isochrones from the \citet{bressan2012} grid are shown for two ages. A systematic offset between the measured absolute $G$-band and the isochrone main sequence of $\sim$0.5 magnitudes is found (Figure \ref{fig:hist}). 
+
+The HR-period diagram in Figure \ref{fig:HR} shows stars with a range of evolutionary states, and could help test post-main sequence angular momentum evolution models \citep[e.g.][]{donascimento2012}. Outliers in this diagram (e.g. the rapidly rotating star at $T_{eff}=4500$ K, $M_G=4.5$ mag, $P_{rot}$=0.652 d, KIC 07957709) are either due to erroneous cross-matching between the \Kepler and Gaia catalogs, or represent interesting systems such as rare binary star configurations or stars that have undergone mergers or ingested giant planets \citep{massarotti2008,tayar2015}. Explaining such outliers is beyond the scope of this work, but are worth further study.
+
+
+
+The difference between the 300 Myr isochrone main sequence track and the observed $M_G$ is shown in Figure \ref{fig:hist}. Given the systematic offset of $\sim$0.5 mag, a fairly wide band of stars ($0\le \Delta M_G \le 1$) was selected as being ``close to the main sequence''. This final sample included 440 stars. This simplistic cut is not a robust dwarf--giant, nor single--binary star separator, but serves to select a sample of mostly main sequence stars for the illustrative purpose of this work. More precise selection will require an improved isochrone track, as well as updated parallaxes from the full Gaia DR2.
 
 
 
@@ -202,7 +205,7 @@ A \citet{meibom2011} 600 Myr gyrochonology-isochrone roughly traces the bimodali
 \begin{figure}[]
 \centering
 \includegraphics[width=4in]{fig5.png}
-\caption{Residual of log rotation periods about the \citet{meibom2011} 600 Myr isochrone, using the log-linear extrapolation between 6000--6500 K shown in Figure \ref{fig:gyro}. The bimodal rotation period distribution is clear, with peaks at $\Delta \log P_{rot}$ -0.19 and 0.21 days.
+\caption{Residual of log rotation periods about the \citet{meibom2011} 600 Myr isochrone, using the log-linear extrapolation between 6000--6500 K shown in Figure \ref{fig:gyro}. The bimodal rotation period distribution is clear, with peaks at $\Delta \log P_{rot}$ of -0.19 and 0.21 days. A two-Gaussian model was fit to this distribution (blue line).
 }
 \label{fig:diff}
 \end{figure}
