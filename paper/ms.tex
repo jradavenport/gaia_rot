@@ -115,11 +115,11 @@ In this paper I demonstrate the utility of combining temporal properties derived
 \section{The \Kepler--Gaia Data}
 Rotation periods in this study come from \citet{mcquillan2014}, who performed an Auto-Correlation Function analysis of \Kepler stars cooler than 6500 K that had at least $\sim$2 years of observation. The periods recovered from this approach generally agree very well with those found via Lomb-Scargle Periodograms \citep[e.g.][]{reinhold2013,aigrain2015}. Sources with multiple distinct periods, such as from binary systems with two spotted stars \citep[e.g.][]{lurie2015} are detected by \citet{mcquillan2014}, but are not included in the following analysis.
 
-The Gaia Data Release 1 (DR1) provides astrometric positions for over $10^9$ sources from the first year of observation with Gaia. The Tycho-Gaia Astrometric Solution (TGAS) measures improved proper motions and parallaxes for 2 million nearby, bright sources by extending the astrometric solutions from Tycho and Hipparcos. While the TGAS data are not a complete astrometric survey, and have possible systematics in the reported parallaxes \citep{stassun2016}, they represent a significant improvement in the astrometry and kinematics available for stars in the \Kepler field thanks to the precision of Gaia.
+The Gaia Data Release 1 (DR1) provides astrometric positions for over $10^9$ sources from the first year of observation with Gaia. The Tycho-Gaia Astrometric Solution (TGAS) measures improved proper motions and parallaxes for 2 million nearby, bright sources by extending the astrometric solutions from Tycho and Hipparcos. While the TGAS data are not a complete astrometric survey, and have possible systematics in the reported parallaxes \citep{gaia_dr1,stassun2016}, they represent a significant improvement in the astrometry and kinematics available for stars in the \Kepler field thanks to the precision of Gaia.
 
 
 Using the CDS X-Match service, I cross-matched the available catalogs from these two surveys. A default cross-match radius of 5 arcsec was used. A total of 33,855 stars were found in cross match between these catalogs, 99.5\% of the sample from \citet{mcquillan2014}. 
-A subset of 1,299 objects were recovered in the TGAS sample. Due to the brightness limits of the TGAS sample very few K and M dwarfs were recovered in the TGAS sample. Future releases of Gaia data will ostensibly provide full astrometric solutions for nearly all \Kepler stars. The rotation periods versus stellar effective temperatures for the \Kepler--Gaia matched stars are shown in Figure \ref{fig:all}. 
+A subset of 1,299 objects were recovered in the TGAS sample. Due to the brightness limits of the TGAS sample very few K and M dwarfs were recovered in the TGAS sample. Future releases of Gaia data will provide full astrometric solutions for nearly all \Kepler stars. The rotation periods versus stellar effective temperatures for the \Kepler--Gaia matched stars are shown in Figure \ref{fig:all}. 
 
 
 
@@ -154,7 +154,7 @@ Rotation period distribution for 33,855 \Kepler stars from \citet{mcquillan2014}
   %            (gaia[u'phot_g_mean_flux_error']/gaia[u'phot_g_mean_flux'] < 0.01))
 Though \citet{mcquillan2014} attempted to only measure periods for dwarf stars, the sample of \Kepler--Gaia matched stars contains both main sequence dwarfs and evolved stars (giants and subgiants). Previous studies have shown  significant contamination by giants or subgiants can affect the implied variability properties of dwarf stars \citep{ciardi2011,mann2012}. Therefore to properly understand the nature of the period distribution and its implications for age-dating field stars, a robust sample of main sequence stars must be selected.
 
-Faint stars were removed by requiring sources have $G$-band flux errors $<1$\%. To ensure accurate distances, and therefore luminosities, parallaxes were required to have errors $<0.4$ mas year$^{-1}$. These cuts left a total of 894 stars from the \Kepler--TGAS matched sample (68\%). The Hertzsprung--Russell (HR) diagram for these stars is shown in Figure \ref{fig:HR}, with each point colored by its \Kepler-measured rotation period. Example isochrones from the \citet{bressan2012} grid are shown for two ages. A systematic offset between the measured absolute $G$-band and the isochrone main sequence of $\sim$0.5 magnitudes is found (Figure \ref{fig:hist}). 
+Faint stars were removed by requiring sources have $G$-band flux errors $<1$\%. To ensure accurate distances, and therefore luminosities, parallaxes were required to have errors $<0.4$ mas. These cuts left a total of 894 stars from the \Kepler--TGAS matched sample (68\%). The Hertzsprung--Russell (HR) diagram for these stars is shown in Figure \ref{fig:HR}, with each point colored by its \Kepler-measured rotation period. Example isochrones from the \citet{bressan2012} grid are shown for two ages. A systematic offset between the measured absolute $G$-band and the isochrone main sequence of $\sim$0.5 magnitudes is found (Figure \ref{fig:hist}). 
 
 The HR-period diagram in Figure \ref{fig:HR} shows stars with a range of evolutionary states, and could help test post-main sequence angular momentum evolution models \citep[e.g.][]{donascimento2012}. Outliers in this diagram (e.g. the rapidly rotating star at $T_{eff}=4500$ K, $M_G=4.5$ mag, $P_{rot}$=0.652 d, KIC 07957709) are either due to erroneous cross-matching between the \Kepler and Gaia catalogs, or represent interesting systems such as rare binary star configurations or stars that have undergone mergers or ingested giant planets \citep{massarotti2008,tayar2015}. Explaining such outliers is beyond the scope of this work, but these targets are worth further study as they may reveal new physics.
 
@@ -350,7 +350,7 @@ the institutions participating in the {\it Gaia} Multilateral Agreement.
   e-prints, arXiv:1506.02653
 
 \bibitem[{{Gaia Collaboration}(2016)}]{gaia}
-{Gaia Collaboration}. 2016, ArXiv e-prints, arXiv:1609.04153
+{Gaia Collaboration}. 2016, ArXiv e-prints, arXiv:1609.04153, doi:10.1051/0004-6361/201629272
 
 \bibitem[{{Hernandez} {et~al.}(2000){Hernandez}, {Valls-Gabaud}, \&
   {Gilmore}}]{hernandez2000}
